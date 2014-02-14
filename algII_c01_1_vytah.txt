@@ -1,0 +1,7 @@
+Vytvoøte tøídu, která bude reprezentovat 
+výtah. Výtah bude jezdit do tøech pater. V 
+každém okamžiku mùžete zavolat metodu 
+ZjistiPatro(), která do konzole vypíše aktuální 
+pozici výtahu. Dále implementujte metody 
+Nahoru(), Dolu(), které budou posunovat 
+výtah o patro nahoru a dolù.
