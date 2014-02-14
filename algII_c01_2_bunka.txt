@@ -1,0 +1,2 @@
+Vytvorte objekt bunka s klicem a hodnotou, jak staticky, tak vynamicky, 
+pridejte konstruktor a destruktor
