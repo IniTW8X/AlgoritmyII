@@ -1,0 +1,16 @@
+A.) Metoda GetArea() bude vracet obsah obdélníku (tøída 
+Rectangle=obdélník).
+B.) Pøidejte a zavolejte metodu GetPerimeter(), která bude vracet 
+obvod obdélníku.
+C.) Pøidejte metody GetWidth, SetWidth, GetHeight, SetHeight, tak, 
+aby vracely nebo mìnily šíøku/výšku obdélníku
+D.) Uživatel vašeho programu chce zadat výšku a šíøku obdélníku a 
+chce na výstupu vidìt obvod a obsah. 
+E.) Do programu dejte nekoneèný cyklus, který se bude vždy ptát na 
+výšku/šíøku obdélníku a spoèítá jeho obvod/obsah. Cyklus skonèí, 
+když se na vstupu objeví 0.
+A.) Upravte pøedchozí pøíklad tak, aby se tøída 
+alokovala dynamicky. 
+• B.) Pøidejte konstruktor a destruktor.
+• C.) Vypište do konzole když se zavolá 
+konstruktor a destruktor
