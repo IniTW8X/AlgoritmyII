@@ -102,7 +102,7 @@ int main()
 	}
 	while (stack->IsEmpty() != 1) cout << stack->Pop();
 
-
+	cout << endl;
 	system("pause");
 	return 0;
 
