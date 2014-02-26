@@ -1,0 +1,9 @@
+Vytváøejte v cyklu dynamicky alokované pole 
+celých èísel. Uživatel bude v nekoneèném 
+cyklu zadávat velikost pole. Pokud zadá èíslo 
+menší než 1, nebo vìtší než 100, tak se 
+program ukonèí. Po každém zadání vstupu, se 
+do pole pøiøadí náhodná èísla a vypíše se na 
+obrazovku.
+• //poznámka: Nezapomenout na uvolòování 
+pamìti !!!

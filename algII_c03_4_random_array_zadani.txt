@@ -1,0 +1,9 @@
+Vytvoøte tøídu RandomArray, která bude obsahovat 
+dynamické pole z úlohy 1. Implementujte metody int 
+GetLastItem() a AddItem(int item). Metoda GetLastItem() 
+vrátí poslední pøidaný prvek v poli. Metoda AddItem(int 
+item) zvìtší velikost pole o jedna a pøidá na konec tohoto 
+pole prvek item. Tøída bude tedy automaticky mìnit 
+velikost tohoto pole. Maximální velikost pole omezte na N 
+(pøi pøekroèení vypište chybové hlášení).
+• //poznámka: Nezapomenout na uvolòování pamìti !!!

@@ -1,0 +1,6 @@
+Implementujte jednoduchou tøídu 
+RandomNumber, která bude mít jednu 
+metodu int GetRandomNumber(). Tato 
+metoda bude vracet náhodné celé èíslo v 
+intervalu <min, max>, kde min a max budou 
+zadány pomocí konstruktoru. Tøídu otestujte.
