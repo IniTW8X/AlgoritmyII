@@ -1,0 +1,5 @@
+• Pøidejte do pøedchozí úlohy tøídu Revolver. 
+Creature bude útoèit pomocí této zbranì. Po 
+vyèerpání nábojù zavolejte metodu Reload, 
+která zpùsobí, že nebude moci 3x zaútoèit.
+• Otestujte

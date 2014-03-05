@@ -1,0 +1,9 @@
+Vytvoøte tøídu Revolver, která bude mít 
+metody:
+– bool Fire() – vrací true, pokud revolver vystøelil
+– void Reload() – znovu nabije zbraò
+• Tøída bude obsahovat 6-ti prvkový kruhový 
+seznam, který bude pøedstavovat otoèný 
+zásobník revolveru. Po výstøelu se ze seznamu 
+odebere náboj a zásobník se „pootoèí“. 
+• Tøídu otestujte.

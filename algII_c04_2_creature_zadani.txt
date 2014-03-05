@@ -1,0 +1,10 @@
+Vytvoøte tøídu Creature, která bude mít urèitý poèet „životù“ a po jejich vyèerpání 
+„zemøe“. Tøída bude mít metody:
+– Int GetHealth() – vrátí poèet životù
+– Void ReceiveAttack(int attack) – ubere daný poèet životù
+– void Attack(Creature* creature) – zaútoèí na jinou Creature (pøedávanou v parametru) tak, 
+že zavolá její metodu ReceiveAttack
+• V konstruktoru této tøídy pøedejte poèet poèáteèních životù a sílu útoku.
+• Vytvoøte dvì instance tøídy s náhodnými hodnotami (v rozumném rozsahu) a 
+nechte je spolu bojovat o život :-). Vypište prùbìh i výsledek na obrazovku.
+• Pøidejte pøípadnì další potøebné metody a upravte podle fantasie.
