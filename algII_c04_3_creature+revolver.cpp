@@ -1,6 +1,7 @@
 #include <iostream>
 using namespace std;
-#define MAX 6
+
+//Yep, they're both using only one revolver... Deal with it :P
 
 class Revolver
 {
@@ -28,7 +29,7 @@ public:
 		kom->Next->Next->Next->Next->Bullet = 1;
 		kom->Next->Next->Next->Next->Next->Bullet = 1;
 	}
-	~Revolver();
+	Revolver::~Revolver();
 	bool Revolver::Fire()
 	{
 		if (kom->Bullet == 1)
@@ -63,7 +64,7 @@ public:
 		}
 		else return 0;
 	}
-	void Reload()
+	void Revolver::Reload()
 	{
 		kom->Bullet = 1;
 		kom->Next->Bullet = 1;
@@ -74,35 +75,37 @@ public:
 	}
 };
 
-class Creature:Revolver
+class Creature :Revolver
 {
 private:
 	int health;
 	int power;
 public:
 	int wait;
-	Creature(int h, int p)
+	Creature::Creature(int h, int p)
 	{
 		health = h;
 		power = p;
 	}
+	Creature::~Creature();
 
-	int GetHealth()
+	int Creature::GetHealth()
 	{
 		return health;
 	}
-	int RecieveAttack(int attack)
+	int Creature::RecieveAttack(int attack)
 	{
+		int bonusAttack = (rand() % 10 + 1);
 		if (Fire() == 1)
-			return health = health - attack;
-		else 
+			return health = health - attack - bonusAttack;
+		else
 		{
 			Reload();
 			wait = 3;
 			return health;
 		}
 	}
-	void Attack(Creature *creature)
+	void Creature::Attack(Creature *creature)
 	{
 		creature->RecieveAttack(power);
 	}
@@ -110,29 +113,35 @@ public:
 
 int main()
 {
-	Creature *c1 = new Creature(20, 1);
-	Creature *c2 = new Creature(226, 1);
-	cout << "Creature 1 HP: " << c1->GetHealth() << endl;
-	cout << "Creature 2 HP: " << c2->GetHealth() << endl;
+	Creature *c1 = new Creature(226, 10);
+	Creature *c2 = new Creature(226, 10);
+	cout << "Creature 1 Start HP: " << c1->GetHealth() << endl;
+	cout << "Creature 2 Start HP: " << c2->GetHealth() << endl;
 	while ((c1->GetHealth() >= 0) && (c2->GetHealth() >= 0))
 	{
 		c1->Attack(c2);
 		if (c1->wait != 0)
 		{
-			cout << "Nabijeni hrace 1..." << endl;
+			cout << "Creature 1 i reloading... (" << c1->wait - 1 << " turns remaining)" << endl;
 			c1->wait = c1->wait - 1;
 		}
-		cout << "Creature 2 HP: " << c2->GetHealth() << endl;
+		else
+		{
+			cout << "Creature 2 HP: " << c2->GetHealth() << endl;
+		}
 		c2->Attack(c1);
 		if (c2->wait != 0)
 		{
-			cout << "Nabijeni hrace 2..." << endl;
-			c2->wait = c1->wait - 1;
+			cout << "Creature 2 i reloading... (" << c2->wait << " turns remaining)" << endl;
+			c2->wait = c2->wait - 1;
 		}
-		cout << "Creature 1 HP: " << c1->GetHealth() << endl;
+		else
+		{
+			cout << "Creature 1 HP: " << c1->GetHealth() << endl;
+		}
 	}
-
-
+	cout << "FIGHT ENDED!" << endl;
+	//delete c1, c2;
 	getchar();
 	return 0;
 }
